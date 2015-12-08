@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_id: 1
+  saname: MyString
+  creditcard_id: 
+  tstatus: MyString
+  tdate: 2015-12-07 18:34:08
+
+two:
+  customer_id: 1
+  saname: MyString
+  creditcard_id: 
+  tstatus: MyString
+  tdate: 2015-12-07 18:34:08

@@ -1,0 +1,29 @@
+<h1>Listing printers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Printertype</th>
+      <th>Resolution</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @printers.each do |printer| %>
+      <tr>
+        <td><%= printer.product_id %></td>
+        <td><%= printer.printertype %></td>
+        <td><%= printer.resolution %></td>
+        <td><%= link_to 'Show', printer %></td>
+        <td><%= link_to 'Edit', edit_printer_path(printer) %></td>
+        <td><%= link_to 'Destroy', printer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Printer', new_printer_path %>

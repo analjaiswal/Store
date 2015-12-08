@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  secnumber: 1
+  ownername: MyString
+  cctype: MyString
+  ccaddress: MyString
+  expdate: 2015-12-07 18:27:15
+
+two:
+  secnumber: 1
+  ownername: MyString
+  cctype: MyString
+  ccaddress: MyString
+  expdate: 2015-12-07 18:27:15

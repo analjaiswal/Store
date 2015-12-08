@@ -1,0 +1,74 @@
+
+    
+    <!-- Plans -->
+    <section id="plans">
+        <div class="container">
+            <div class="row">
+              <% @products.each do |product| %>
+
+                <!-- item -->
+                <div class="col-md-4 text-center">
+                    <div class="panel panel-info panel-pricing">
+                        <div class="panel-heading">
+                            <i class="fa fa-desktop"></i>
+                            <h3><%= product.pname %></h3>
+                        </div>
+                        <div class="panel-body text-center">
+                            <p><strong><%= product.pprice %></strong></p>
+                        </div>
+                        <ul class="list-group text-center">
+
+                        <% if product.computers.present? %>
+                              <% product.computers.each do |c| %>
+                               <li class="list-group-item"><i class="fa fa-check"></i>CPU TYPE:<%=  c.cputype %></li>
+                              <% end %>
+                          <% else %>
+                          <% product.printers.each do |p| %>
+                           <li class="list-group-item"><i class="fa fa-check"></i>PRINTER:<%= p.printertype %></li>
+                            <li class="list-group-item"><i class="fa fa-check"></i>RESOLUTION:<%= p.resolution %></li>
+                             
+                        <% end %>
+                      <% end %>
+                           
+                        </ul>
+                        <div class="panel-footer">
+                        <% if customer_signed_in? %>
+                          <%= simple_form_for(@cart) do |f| %>
+                              <%= f.error_notification %>
+
+                              <div class="form-inputs">
+                                   <%= f.input :customer_id , :as => "hidden", :input_html => { :value => current_customer.id ,:readonly => true} %>
+                                   <%= f.input :product_id , :as => "hidden", :input_html => { :value => product.id ,:readonly => true} %>
+                                   <%=f.input :quantity , :input_html => { :value => product.pprice}, :id => "a1" %>
+                                  
+                                  
+                                 
+                                 
+                              </div>
+
+                            <div class="form-actions">
+                                <%= f.button :submit , "Add to cart" %>
+                            </div>
+                          <% end %>
+
+                          <% end %>
+                        </div>
+                    </div>
+                </div>
+                <% end %>
+                <!-- /item -->
+
+                <!-- item -->
+                
+                <!-- /item -->
+
+                <!-- item -->
+                
+                <!-- /item -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- /Plans -->
+<%= link_to 'New Product', new_product_path %>

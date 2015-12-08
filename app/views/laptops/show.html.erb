@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @laptop.product_id %>
+</p>
+
+<p>
+  <strong>Btype:</strong>
+  <%= @laptop.btype %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @laptop.weight %>
+</p>
+
+<%= link_to 'Edit', edit_laptop_path(@laptop) %> |
+<%= link_to 'Back', laptops_path %>

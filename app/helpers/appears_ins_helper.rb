@@ -1,0 +1,2 @@
+module AppearsInsHelper
+end

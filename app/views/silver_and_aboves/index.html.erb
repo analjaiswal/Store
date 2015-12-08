@@ -1,0 +1,27 @@
+<h1>Listing silver_and_aboves</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Customer</th>
+      <th>Creditline</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @silver_and_aboves.each do |silver_and_abofe| %>
+      <tr>
+        <td><%= silver_and_abofe.customer_id %></td>
+        <td><%= silver_and_abofe.creditline %></td>
+        <td><%= link_to 'Show', silver_and_abofe %></td>
+        <td><%= link_to 'Edit', edit_silver_and_abofe_path(silver_and_abofe) %></td>
+        <td><%= link_to 'Destroy', silver_and_abofe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Silver and above', new_silver_and_abofe_path %>

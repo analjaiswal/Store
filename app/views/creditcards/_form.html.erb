@@ -1,0 +1,16 @@
+<%= simple_form_for(@creditcard) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :secnumber %>
+    <%= f.input :ownername %>
+    <%= f.input :cctype %>
+    <%= f.input :ccaddress %>
+    <%= f.input :expdate %>
+    <%= f.input :customer_id , :as => "hidden", :input_html => { :value => current_customer.id ,:readonly => true} %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

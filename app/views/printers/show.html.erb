@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @printer.product_id %>
+</p>
+
+<p>
+  <strong>Printertype:</strong>
+  <%= @printer.printertype %>
+</p>
+
+<p>
+  <strong>Resolution:</strong>
+  <%= @printer.resolution %>
+</p>
+
+<%= link_to 'Edit', edit_printer_path(@printer) %> |
+<%= link_to 'Back', printers_path %>

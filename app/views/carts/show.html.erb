@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @cart.customer_id %>
+</p>
+
+<p>
+  <strong>Saname:</strong>
+  <%= @cart.saname %>
+</p>
+
+<p>
+  <strong>Creditcard:</strong>
+  <%= @cart.creditcard_id %>
+</p>
+
+<p>
+  <strong>Tstatus:</strong>
+  <%= @cart.tstatus %>
+</p>
+
+<p>
+  <strong>Tdate:</strong>
+  <%= @cart.tdate %>
+</p>
+
+<%= link_to 'Edit', edit_cart_path(@cart) %> |
+<%= link_to 'Back', carts_path %>

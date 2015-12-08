@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Secnumber:</strong>
+  <%= @creditcard.secnumber %>
+</p>
+
+<p>
+  <strong>Ownername:</strong>
+  <%= @creditcard.ownername %>
+</p>
+
+<p>
+  <strong>Cctype:</strong>
+  <%= @creditcard.cctype %>
+</p>
+
+<p>
+  <strong>Ccaddress:</strong>
+  <%= @creditcard.ccaddress %>
+</p>
+
+<p>
+  <strong>Expdate:</strong>
+  <%= @creditcard.expdate %>
+</p>
+
+<%= link_to 'Edit', edit_creditcard_path(@creditcard) %> |
+<%= link_to 'Back', creditcards_path %>

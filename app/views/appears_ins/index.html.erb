@@ -1,0 +1,31 @@
+<h1>Listing appears_ins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cart</th>
+      <th>Product</th>
+      <th>Quantity</th>
+      <th>Pricesold</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @appears_ins.each do |appears_in| %>
+      <tr>
+        <td><%= appears_in.cart_id %></td>
+        <td><%= appears_in.product_id %></td>
+        <td><%= appears_in.quantity %></td>
+        <td><%= appears_in.pricesold %></td>
+        <td><%= link_to 'Show', appears_in %></td>
+        <td><%= link_to 'Edit', edit_appears_in_path(appears_in) %></td>
+        <td><%= link_to 'Destroy', appears_in, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Appears in', new_appears_in_path %>
